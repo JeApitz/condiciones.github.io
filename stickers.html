@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+      }
+      .boton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .contenedor-img {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+      }
+      .contenedor-img img {
+        max-width: 100%;
+        max-height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Puedes llevar hasta 10 stickers</h1>
+      <div class="contenedor">
+        <div class="flex-container">
+          <div class="contenedor-img">
+            <img src="./assets/img/github.jpg" alt="" />
+          </div>
+          <input type="text" class="num1" />
+        </div>
+        <div class="flex-container">
+          <div class="contenedor-img">
+            <img src="./assets/img/slack.jpg" alt="" />
+          </div>
+          <input type="text" class="num2" />
+        </div>
+        <div class="flex-container">
+          <div class="contenedor-img">
+            <img src="./assets/img/git.png" alt="" />
+          </div>
+          <input type="text" class="num3" />
+        </div>
+      </div>
+      <div class="boton">
+        <p></p>
+        <button
+          onclick="
+          num1 = document.querySelector('.num1').value
+          num2 = document.querySelector('.num2').value
+          num3 = document.querySelector('.num3').value
+          valor1 = Number(num1)
+          valor2 = Number(num2)
+          valor3 = Number(num3)
+          parrafo=document.querySelector('p')
+          total = valor1 + valor2 + valor3
+          if(total > 10){
+            parrafo.innerHTML = 'Llevas demasiados stickers'
+          }else{
+            parrafo.innerHTML = 'Llevas ' + total + ' stickers'  
+          }
+          "
+        >
+          Verificar
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

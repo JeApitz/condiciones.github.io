@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>
+        Haz click en la imagen para que aparezca o desparezca el borde rojo.
+      </h1>
+      <img
+        src="./assets/img/ec3dd4d0-d666-44e8-bdcf-06b5f103b111.jpg"
+        width="500px"
+        alt=""
+        onclick="
+          borde = document.querySelector('img')
+          if(borde.style.border == '2px solid red'){
+              borde.style.border = 'none'
+          }else{
+              borde.style.border = '2px solid red'
+          }
+          "
+      />
+    </div>
+  </body>
+</html>
